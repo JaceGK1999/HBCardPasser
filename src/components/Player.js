@@ -3,7 +3,7 @@ import { useGameContext } from '../context/GameContext';
 import CardList from './CardList';
 
 export default function Player({ player, hand }) {
-  const { to, setFrom, selectedCard, setTo, setSelectedCard } = useGameContext();
+  const { to, setTo } = useGameContext();
 
   {
     return (
@@ -15,9 +15,6 @@ export default function Player({ player, hand }) {
         <CardList
           player={player}
           cards={hand}
-          setFrom={setFrom}
-          selectedCard={selectedCard}
-          setSelectedCard={setSelectedCard}
         />
       </div>
     );
